@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>이가은 | Infra · DevOps Engineer</title>
+<meta name="description" content="이가은 — 인프라 · DevOps 엔지니어 이력서. 온프레미스 가상화부터 프라이빗 클라우드, CI/CD까지." />
+<meta property="og:title" content="이가은 | Infra · DevOps Engineer" />
+<meta property="og:description" content="온프레미스 가상화부터 프라이빗 클라우드, CI/CD까지 인프라 전 과정을 설계하는 엔지니어" />
+<meta property="og:type" content="profile" />
+<meta property="og:url" content="https://kaeunlee-kr.github.io/resume/" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<style>
+  :root{
+    --bg:#ffffff;
+    --surface:#f7f7f5;
+    --border:#e4e4e0;
+    --text:#1a1a18;
+    --muted:#575652;
+    --faint:#93938d;
+    --accent:#1f5f52;
+    --accent-soft:#e8f0ed;
+    --navy:#1b2559;
+    --maxw:880px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#141413;
+      --surface:#1c1c1a;
+      --border:#2e2e2b;
+      --text:#eceae4;
+      --muted:#b0afa9;
+      --faint:#7b7a74;
+      --accent:#7fc8b4;
+      --accent-soft:#1e2c28;
+      --navy:#232f6b;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#141413; --surface:#1c1c1a; --border:#2e2e2b; --text:#eceae4;
+    --muted:#b0afa9; --faint:#7b7a74; --accent:#7fc8b4; --accent-soft:#1e2c28; --navy:#232f6b;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI",Roboto,"Noto Sans KR",sans-serif;
+    font-size:15px;
+    line-height:1.65;
+    word-break:keep-all;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:56px 16px 96px;}
+  a{color:inherit;}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;}
+
+  /* ── header ─────────────────────────── */
+  header{padding-bottom:26px;border-bottom:1px solid var(--border);}
+  .eyebrow{
+    font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;margin-bottom:10px;
+  }
+  h1{
+    margin:0;font-size:clamp(34px,7vw,46px);line-height:1.1;
+    letter-spacing:-.02em;font-weight:800;
+  }
+  h1 .en{
+    display:block;font-size:14px;letter-spacing:.14em;font-weight:600;
+    color:var(--faint);margin-top:10px;text-transform:uppercase;
+  }
+  .tagline{margin:18px 0 0;font-size:16.5px;color:var(--muted);max-width:52ch;}
+  .contact{
+    list-style:none;display:flex;flex-wrap:wrap;gap:8px 10px;
+    margin:22px 0 0;padding:0;font-size:13.5px;
+  }
+  .contact li a{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:5px 11px;border:1px solid var(--border);border-radius:999px;
+    color:var(--muted);text-decoration:none;transition:.15s;background:var(--bg);
+  }
+  .contact li a:hover{border-color:var(--accent);color:var(--accent);}
+  .contact svg{width:13px;height:13px;flex:none;}
+
+  /* ── sections ───────────────────────── */
+  section{margin-top:46px;}
+  h2{
+    margin:0 0 20px;font-size:12px;font-weight:700;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--faint);
+    padding-bottom:9px;border-bottom:1px solid var(--border);
+  }
+
+  /* ── table ──────────────────────────── */
+  .tbl{width:100%;border-collapse:collapse;font-size:15.5px;}
+  .tbl thead th{
+    background:var(--navy);color:#fff;text-align:left;
+    padding:13px 20px;font-weight:700;font-size:14.5px;letter-spacing:.01em;
+  }
+  .tbl td{padding:13px 20px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--muted);}
+  .tbl tbody tr:nth-child(even) td{background:var(--surface);}
+  .tbl td:first-child{font-weight:700;color:var(--text);white-space:nowrap;width:180px;}
+  .tbl td.num{white-space:nowrap;font-variant-numeric:tabular-nums;}
+  @media (max-width:560px){
+    .tbl{font-size:13.5px;}
+    .tbl thead th,.tbl td{padding:10px 12px;}
+    .tbl td:first-child{width:auto;white-space:normal;}
+  }
+
+  /* ── experience ─────────────────────── */
+  .job-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin-bottom:6px;}
+  .job-head h3{margin:0;font-size:22px;font-weight:700;letter-spacing:-.01em;}
+  .job-head .role{font-size:15.5px;color:var(--muted);}
+  .job-head .period{
+    margin-left:auto;font-size:13px;color:var(--faint);
+    font-variant-numeric:tabular-nums;white-space:nowrap;
+  }
+  .job-summary{margin:0 0 22px;color:var(--muted);font-size:16.5px;}
+
+  .proj{padding:16px 0;border-top:1px dashed var(--border);}
+  .proj:first-of-type{border-top:1px solid var(--border);}
+  .proj h4{
+    margin:0 0 9px;font-size:18.5px;font-weight:700;letter-spacing:-.01em;
+    display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;
+  }
+  .proj h4::before{
+    content:"";width:6px;height:6px;border-radius:50%;
+    background:var(--accent);flex:none;transform:translateY(-3px);
+  }
+  .proj ul{margin:0;padding-left:17px;}
+  .proj li{margin:6px 0;color:var(--muted);font-size:16.5px;line-height:1.62;}
+  .proj li::marker,.card li::marker{color:var(--faint);font-size:.8em;}
+  .proj li strong,.card li strong{color:var(--text);font-weight:600;}
+  .impact{
+    display:inline-block;margin-top:10px;font-size:14.5px;font-weight:600;
+    color:var(--accent);background:var(--accent-soft);padding:3px 10px;border-radius:5px;
+  }
+  .stack{margin:10px 0 0;font-size:13.5px;color:var(--faint);}
+
+  /* ── project cards ──────────────────── */
+  .card{padding:17px 0;border-top:1px dashed var(--border);}
+  .card:first-of-type{border-top:1px solid var(--border);}
+  .card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;}
+  .card-head h3{margin:0;font-size:18.5px;font-weight:700;}
+  .card-head .meta{font-size:13.5px;color:var(--faint);margin-left:auto;white-space:nowrap;}
+  .award{
+    font-size:12px;font-weight:700;color:var(--accent);
+    border:1px solid var(--accent);border-radius:4px;padding:1px 6px;
+  }
+  .card p.desc{margin:7px 0 9px;font-size:15.5px;color:var(--muted);}
+  .card ul{margin:0;padding-left:17px;}
+  .card li{margin:5px 0;font-size:16px;color:var(--muted);line-height:1.62;}
+
+  footer{
+    margin-top:56px;padding-top:20px;border-top:1px solid var(--border);
+    font-size:12.5px;color:var(--faint);display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:10px;
+  }
+
+  .toolbar{position:fixed;top:14px;right:14px;display:flex;gap:6px;z-index:10;}
+  .toolbar button{
+    font:inherit;font-size:12px;cursor:pointer;background:var(--bg);color:var(--muted);
+    border:1px solid var(--border);border-radius:7px;padding:6px 11px;transition:.15s;
+  }
+  .toolbar button:hover{color:var(--accent);border-color:var(--accent);}
+
+  /* ── print ──────────────────────────── */
+  @media print{
+    :root{--bg:#fff;--surface:#f5f5f3;--border:#d8d8d4;--text:#000;--muted:#2e2e2c;--faint:#666;--accent:#1f5f52;--accent-soft:#eef4f2;--navy:#1b2559;}
+    @page{margin:13mm 12mm;}
+    body{font-size:10pt;line-height:1.45;}
+    .wrap{padding:0;max-width:none;}
+    .toolbar{display:none;}
+    header{padding-bottom:14px;}
+    h1{font-size:26pt;}
+    section{margin-top:20px;}
+    h2{margin-bottom:12px;}
+    .tbl thead th{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .tbl tbody tr:nth-child(even) td{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .tbl thead th,.tbl td{padding:7px 12px;}
+    .proj,.card,.tbl tr{break-inside:avoid;page-break-inside:avoid;}
+    .proj{padding:9px 0;}
+    a{text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="theme" type="button">테마</button>
+  <button id="print" type="button">PDF 저장</button>
+</div>
+
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Infra · DevOps Engineer</p>
+    <h1>이가은<span class="en">Lee Kaeun</span></h1>
+    <p class="tagline">온프레미스 가상화부터 프라이빗 클라우드, CI/CD까지 인프라 전 과정을 설계하는 엔지니어입니다.</p>
+    <ul class="contact">
+      <li><a href="mailto:kaeunlee@daou.co.kr">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        kaeunlee@daou.co.kr</a></li>
+      <li><a href="https://github.com/kaeunlee-kr" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.38-3.88-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.3-.52-1.47.11-3.07 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.77.12 3.07.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.06.78 2.14v3.18c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+        github.com/kaeunlee-kr</a></li>
+      <li><a href="https://strawberry125.tistory.com/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+        기술 블로그</a></li>
+      <li><a href="https://www.youtube.com/@%ED%99%80%EC%94%A8125" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.8-.48-5.62a2.9 2.9 0 0 0-2.04-2.05C18.66 3.85 12 3.85 12 3.85s-6.66 0-8.48.48A2.9 2.9 0 0 0 1.48 6.4C1 8.2 1 12 1 12s0 3.8.48 5.62a2.9 2.9 0 0 0 2.04 2.05c1.82.48 8.48.48 8.48.48s6.66 0 8.48-.48a2.9 2.9 0 0 0 2.04-2.05C23 15.8 23 12 23 12ZM9.75 15.4V8.6L15.5 12l-5.75 3.4Z"/></svg>
+        YouTube @홀씨125</a></li>
+    </ul>
+  </header>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <table class="tbl">
+      <thead>
+        <tr><th scope="col">분류</th><th scope="col">보유 기술</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>가상화</td><td>VMware vSphere, Content Library, XCP-ng, ESXi, Xen Hypervisor</td></tr>
+        <tr><td>OS</td><td>Rocky Linux / RHEL</td></tr>
+        <tr><td>운영 자동화·IaC</td><td>Ansible, Python, Bash/Shell Script</td></tr>
+        <tr><td>물리·하드웨어</td><td>Dell/Lenovo 서버, iDRAC/IMM, 펌웨어, IDC 설치·케이블 포설</td></tr>
+        <tr><td>네트워크·보안</td><td>Fortigate 방화벽·VPN, Cisco 스위치</td></tr>
+        <tr><td>클라우드·컨테이너</td><td>AWS(Bedrock, CLI), GCP, docker-compose, LiteLLM</td></tr>
+        <tr><td>ETC</td><td>Kubernetes, Jenkins</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="job-head">
+      <h3>다우기술</h3>
+      <span class="role">인프라운영팀 · 시스템 엔지니어</span>
+      <span class="period">2025.04 ~ 재직 중</span>
+    </div>
+    <p class="job-summary">
+      200대 이상 서버를 운영하며 프라이빗 클라우드 구축, 쿠버네티스 마이그레이션,
+      모니터링 체계 수립, GPU·AI 인프라 도입, 운영 자동화를 담당하고 있습니다.
+    </p>
+
+    <article class="proj">
+      <h4>PXE 서버 구축 및 상시 인프라 운영</h4>
+      <ul>
+        <li><strong>DHCP → TFTP → HTTP</strong> 순으로 부트로더·OS 이미지를 전달하는 자동 설치 환경 구축</li>
+        <li>서버 펌웨어(iDRAC/IMM)·RAID·OS 설치, FortiGate 정책·VPN, SSL 인증서 발급, vSphere·XCP-ng 운영</li>
+      </ul>
+      <p class="stack">PXE · FortiGate · vSphere · XCP-ng · Ansible</p>
+    </article>
+    <article class="proj">
+      <h4>OpenStack 프라이빗 클라우드 구축</h4>
+      <ul>
+        <li><strong>Kolla-Ansible</strong>로 물리 3노드에 배포해 컨트롤 플레인 <strong>HA</strong> 구성</li>
+        <li>VXLAN 오버레이로 테넌트 네트워크 분리, <strong>Ceph</strong>를 스토리지 백엔드로 연동</li>
+      </ul>
+      <p class="stack">OpenStack · Kolla-Ansible · Ceph · VXLAN</p>
+    </article>
+
+    <article class="proj">
+      <h4>쿠버네티스 마이그레이션 및 CI/CD</h4>
+      <ul>
+        <li>Ingress 라우팅을 <strong>Gateway API(HTTPRoute)</strong>로 전환해 라우팅·인증·정책 중앙화</li>
+        <li>고객사 독립형 인프라를 <strong>Docker Compose 템플릿</strong>으로 설계, YAML 앵커로 신규 서비스 추가 시 반복 설정 제거</li>
+        <li><strong>Jenkins + GCP Artifact Registry</strong>로 빌드·배포 자동화, 원격 서버는 이미지 pull만으로 재기동해 롤백 용이성 확보</li>
+      </ul>
+      <span class="impact">고객사 확장 시 추가 비용 없이 대응 가능한 구조 확립</span>
+      <p class="stack">Kubernetes · Gateway API · Docker Compose · Jenkins</p>
+    </article>
+
+    <article class="proj">
+      <h4>모니터링 시스템 구축</h4>
+      <ul>
+        <li>CentOS 7의 Zabbix 7 미지원 이슈 → Rocky 9 신규 구축 후 <strong>6.0 → 7.0 업그레이드</strong> 이행</li>
+        <li>Kafka Lag·정합성 리스크를 <strong>JMX Exporter → Prometheus → Grafana</strong>로 가시화</li>
+        <li>NCP에 Gitea → Coolify 기반 배포 파이프라인 및 인증 인프라 구성</li>
+      </ul>
+      <p class="stack">Zabbix · Prometheus · Grafana · Coolify</p>
+    </article>
+
+    <article class="proj">
+      <h4>GPU 서버 구축 및 Ray 분산 처리</h4>
+      <ul>
+        <li>Dell PowerEdge R760 6대 · <strong>NVIDIA L40S 8EA</strong> AI 인프라 구축, 전원 이중화(A+B) 적용</li>
+        <li>3개 임베딩 모델로 쇼핑몰 카테고리 7.7만 건을 표준 카테고리에 자동 매핑, <strong>Ray</strong>로 분산 처리</li>
+      </ul>
+      <span class="impact">임베딩 소요 시간 약 40% 단축</span>
+      <p class="stack">NVIDIA L40S · Ray · Python</p>
+    </article>
+
+    <article class="proj">
+      <h4>운영 업무 자동화 프로그램 개발</h4>
+      <ul>
+        <li><strong>VPN/방화벽 정책 자동화</strong> — 신청 정보 기반으로 세션 수립부터 스케줄 정책 생성까지 자동화</li>
+        <li>로그 수집 스케줄러·자산관리대장 자동화로 변경 이력 추적과 보고 자료 생성을 무인화</li>
+      </ul>
+      <span class="impact">방화벽 정책 작업 3분 → 15초, 휴먼 에러 0%</span>
+      <p class="stack">Python · REST API · FortiGate</p>
+    </article>
+
+    <article class="proj">
+      <h4>IaC 기반 인프라 구축 및 비용 최적화</h4>
+      <ul>
+        <li><strong>Terraform</strong>으로 NCP 서버 스펙을 모듈화하고 Cloud Function으로 지정 시간대 자동 시작·중지</li>
+        <li>AWS는 새벽 시간대 우선 <strong>Scale-In</strong> 적용, 비용 조회를 CUR → CLI 실시간 조회 체계로 전환</li>
+      </ul>
+      <p class="stack">Terraform · NCP · AWS CLI</p>
+    </article>
+
+    <article class="proj">
+      <h4>메시지 브로커 도입 (Redis · RabbitMQ · Kafka)</h4>
+      <ul>
+        <li>Memcached 세션 유실 문제를 <strong>Spring Session Data Redis</strong>로 전환, RDB/AOF 영속성으로 재시작 후 복구 가능</li>
+        <li>RabbitMQ <strong>ACK·Dead-letter Queue</strong>로 메시지 유실 방지, Kafka는 클러스터 구성으로 Broker 장애 시에도 서비스 지속</li>
+      </ul>
+      <p class="stack">Kafka · RabbitMQ · Redis</p>
+    </article>
+
+  </section>
+
+  <section id="projects">
+    <h2>Projects &amp; Activities</h2>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>ENADU — 개발자 지식 공유 플랫폼</h3>
+        <span class="award">최우수상</span>
+        <span class="meta">한화시스템 Beyond 6기 · 백엔드 5명 · 2024.09 ~ 2024.11</span>
+      </div>
+      <p class="desc">WIKI + QnA + Blog를 통합한 개발자 지식 공유 플랫폼. <strong>인프라 설계 및 배포 자동화</strong>를 담당했습니다.</p>
+      <ul>
+        <li>온프레미스 K8s 클러스터(마스터 1·워커 3) 구성, Helm으로 <strong>MariaDB Galera Cluster</strong> 배포</li>
+        <li><strong>Blue/Green</strong> 무중단 배포 채택, GitHub 머지 → Jenkins 웹훅 → K8s 배포 파이프라인 구축</li>
+        <li>Blue/Green 환경의 <strong>OAuth 세션 불일치</strong>를 소셜 로그인 Service 분리와 Sticky Session으로 해결</li>
+        <li>실시간 랭킹 조회를 <strong>Spring Batch 사전 집계</strong> 방식으로 전환해 리소스 낭비 제거</li>
+      </ul>
+      <span class="impact">메모리 8%↓ · CPU 평균 12%↓ · p95 30%↓</span>
+      <p class="stack">Kubernetes · Helm · MariaDB Galera · Jenkins · Spring Batch · Elasticsearch</p>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>대규모 실시간 채팅 플랫폼</h3>
+        <span class="meta">개인 · 아키텍처 설계</span>
+      </div>
+      <ul>
+        <li>Member / Team / Chat / Notification을 독립 서버로 분리한 <strong>MSA</strong>, 서비스 간 통신은 Kafka 이벤트 드리븐으로 처리</li>
+        <li><strong>CQRS</strong>로 읽기·쓰기 모델 분리, <strong>Event Sourcing</strong>으로 장애 시 상태 복원</li>
+        <li>API Composition으로 1초를 넘던 Latency를 <strong>Transactional Outbox</strong> 패턴으로 개선 — 멱등 처리와 PartitionKey로 순서 일관성 유지</li>
+      </ul>
+      <span class="impact">Outbox 적용 후 이벤트 유실·중복 소비 0건</span>
+      <p class="stack">Kafka · MSA · CQRS · Event Sourcing</p>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>해커톤 '삐약톤' — 스터디 모집 · 장소 추천 서비스</h3>
+        <span class="meta">2025.01</span>
+      </div>
+      <ul>
+        <li>백엔드 개발 및 AWS 인프라 구축, Redis 기반 <strong>토큰 블랙리스트</strong>에 TTL을 적용해 정리 배치 없이 메모리 누수 없는 구조 확보</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>창업 동아리 '스케일 메이커스'</h3>
+        <span class="meta">2025.01 ~ 2025.04</span>
+      </div>
+      <ul>
+        <li><strong>Presigned URL</strong> 기반 이미지 업로드 파이프라인 구축, URL 발급·DB 전담 서버를 분리해 부하 분산</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>교내 동아리 '멋쟁이사자처럼' — 백엔드</h3>
+        <span class="meta">2023.03 ~ 2024.03</span>
+      </div>
+      <ul>
+        <li>이커머스 주문의 <strong>재고 정합성 문제</strong>를 DB 락 한계 분석 후 <strong>Redisson 분산 락</strong>으로 해결</li>
+      </ul>
+    </article>
+  </section>
+
+  <section id="certification">
+    <h2>Certification</h2>
+    <table class="tbl">
+      <thead>
+        <tr><th scope="col">분류</th><th scope="col">자격 사항</th><th scope="col">취득일</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>컨테이너</td><td>CKA (Certified Kubernetes Administrator)</td><td class="num">2026.03</td></tr>
+        <tr><td>데이터</td><td>SQLD (SQL 개발자)</td><td class="num">2025.04</td></tr>
+        <tr><td>어학</td><td>OPIc IM3</td><td class="num">2026.02</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <table class="tbl">
+      <thead>
+        <tr><th scope="col">구분</th><th scope="col">내용</th><th scope="col">기간</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>학력</td><td>을지대학교 졸업</td><td class="num">2021.03 ~ 2025.08</td></tr>
+        <tr><td>교육</td><td>한화시스템 Beyond 부트캠프 6기</td><td class="num">2024.04 ~ 2024.10</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <span>© 2026 이가은</span>
+    <span>Last updated 2026.09</span>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var saved = null;
+    try { saved = localStorage.getItem('resume-theme'); } catch (e) {}
+    if (saved) root.setAttribute('data-theme', saved);
+
+    document.getElementById('theme').addEventListener('click', function () {
+      var current = root.getAttribute('data-theme');
+      if (!current) {
+        current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      var next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('resume-theme', next); } catch (e) {}
+    });
+
+    document.getElementById('print').addEventListener('click', function () {
+      window.print();
+    });
+  })();
+</script>
+</body>
+</html>
